@@ -79,6 +79,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
 	  	<line x1={(radius+10)*Math.cos(i)} y1={(radius+10)*Math.sin(i)} x2={(radius-10)*Math.cos(i)} y2={(radius-10)*Math.sin(i)} stroke={theme.colors.text.primary} strokeWidth="2"/>
 	  )	
 	  }
+  	<line x1={(radius-70)*Math.cos(Math.PI/2 + currTiltRadians)} y1={(radius-70)*Math.sin(Math.PI/2 + currTiltRadians)} x2={(radius-70)*Math.cos(3*Math.PI/2 + currTiltRadians)} y2={(radius-70)*Math.sin(3*Math.PI/2 + currTiltRadians)} stroke={theme.colors.text.primary} strokeWidth="2"/>
   	<line x1={(radius-20)*Math.cos(Math.PI + currTiltRadians)} y1={(radius-20)*Math.sin(Math.PI + currTiltRadians)} x2={(radius-20)*Math.cos(currTiltRadians)} y2={(radius-20)*Math.sin(currTiltRadians)} stroke={theme.colors.text.primary} strokeWidth="2"/>
         </g>
       </svg>
