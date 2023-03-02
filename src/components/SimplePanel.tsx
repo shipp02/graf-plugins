@@ -68,19 +68,20 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
         viewBox={`-${width / 2} -${height / 2} ${width} ${height}`}
       >
         <g>
-          <circle stroke={theme.colors.border.strong} style={{ fill: theme.colors.background.primary }} r={100} strokeWidth="4%"/>
+          <circle stroke={theme.colors.background.secondary} style={{ fill: theme.colors.background.secondary }} r={100} strokeWidth="4%"/>
 	  {
 	  angles.map((i) =>
-	  	<line x1={(radius+10)*Math.cos(i)} y1={(radius+10)*Math.sin(i)} x2={(radius-10)*Math.cos(i)} y2={(radius-10)*Math.sin(i)} stroke={theme.colors.text.secondary} strokeWidth="1"/>
+	  	<line x1={(radius+10)*Math.cos(i)} y1={(radius+10)*Math.sin(i)} x2={(radius-10)*Math.cos(i)} y2={(radius-10)*Math.sin(i)} stroke={theme.colors.secondary.text} strokeWidth="2"/>
 	  )
 	  }
 	  {
 	  empAngleRadians.map((i) => 
-	  	<line x1={(radius+10)*Math.cos(i)} y1={(radius+10)*Math.sin(i)} x2={(radius-10)*Math.cos(i)} y2={(radius-10)*Math.sin(i)} stroke={theme.colors.text.primary} strokeWidth="2"/>
+	  	<line x1={(radius+10)*Math.cos(i)} y1={(radius+10)*Math.sin(i)} x2={(radius-10)*Math.cos(i)} y2={(radius-10)*Math.sin(i)} stroke={theme.colors.secondary.contrastText} strokeWidth="3"/>
 	  )	
 	  }
   	<line x1={(radius-70)*Math.cos(Math.PI/2 + currTiltRadians)} y1={(radius-70)*Math.sin(Math.PI/2 + currTiltRadians)} x2={(radius-70)*Math.cos(3*Math.PI/2 + currTiltRadians)} y2={(radius-70)*Math.sin(3*Math.PI/2 + currTiltRadians)} stroke={theme.colors.text.primary} strokeWidth="2"/>
   	<line x1={(radius-20)*Math.cos(Math.PI + currTiltRadians)} y1={(radius-20)*Math.sin(Math.PI + currTiltRadians)} x2={(radius-20)*Math.cos(currTiltRadians)} y2={(radius-20)*Math.sin(currTiltRadians)} stroke={theme.colors.text.primary} strokeWidth="2"/>
+          <circle stroke={theme.colors.border.strong} style={{ fill: theme.colors.primary.main }} r={7} />
         </g>
       </svg>
 
